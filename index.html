@@ -1,334 +1,96 @@
 <html>
     <head>
-        <title>
-            Submission
-        </title>
-        <script src="Submission.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>For My Luv ❤︎</title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </head>
-    <style>
-        .header {
-            width: 100%;
-            height: 5%;
-            background-color: rgba(53, 53, 53, 0.5);
-            text-align: center;
-            margin-top: 2%;
-            color: white;
-            list-style-type: none;
-            position: sticky;
-            overflow: hidden;
-            top: 0;
-            width: 100%;
-        }
-        .header a {
-            margin-top: 0.4%;
-            font-size: 20px;
-            font-family: Calibri;
-            font-weight: bold;
-            color: white;
-        }
-        .body {
-            width: 100%;
-            height: 300px;
-            text-align: center;
-            background-color: none;
-            color: white;
-            font-family: Calibri;
-        }
-        .body img {
-            width: 130px;
-            height: 130px;
-            margin-top: 3%;
-        }
-        .isi {
-            float: left;
-            margin-left: 25%;
-            font-family: Calibri;
-            color: white;
-            font-weight: bold;  
-        }
-        .samping {
-            float: right;
-            margin-right: 36%;
-            font-family: Calibri;
-            color: white;
-        }
-        .palingbwh {
-            margin-top: -1.1%;
-            text-align: center;
-            font-family: Calibri;
-            font-weight: bold;
-            color: white;
-        }
-        .backbwh {
-            background-color: rgba(53, 53, 53, 0.8);
-            width: 100%;
-            height: 90px;
-            
-            margin-top: -6.7%;
-        }
-        .garis {
-            width: 25%;
-            height: 3px;
-            background-color: rgb(9, 170, 9);
-            float: left;
-        }
-        .garis1 {
-            width: 25%;
-            height: 3px;
-            background-color: rgb(0, 174, 255);
-            float: left;
+    <body>
+        <div class="bg">
+            <h3>Haii Bebeb, Mas Mau Nanya Sesuatu Nihh Sama Bby, Bby Jawab Yang Bener Yaa. Awas Aja Jawab Nya Main"</h3>
+            <button id="uw">Pencet Ini </button>
+        </div>
+        <script>
+        (async () => {
 
-        }
-        .garis2 {
-            width: 25%;
-            height: 3px;
-            background-color: rgb(255, 170, 184);
-            float: left;
-        }
-        .garis3 {
-            width: 25%;
-            height: 3px;
-            background-color: black;
-            float: right;
-        }
-        .x1 {
-            width: 50px;
-            height: 50px;
-            margin-right: 10%;
-            border: grey;
-            border-radius: 50%; 
-            cursor: pointer;
-        }
-        .x2 {
-            width: 50px;
-            height: 50px;
-            border: grey;
-            border-radius: 50%; 
-            cursor: pointer;
-        }
-        .x3 {
-            width: 50px;
-            height: 50px;
-            margin-left: 10%;
-            border: grey;
-            border-radius: 50%; 
-            cursor: pointer;
-        }
-        .samping hr {
-            width: 177%;
-        }
-        .body img {
-            border: 2px solid white;
-            border-radius: 50%;
-        }
-        .ovrly {
-            position: absolute;
-            bottom: 0;
-            left: 45%;
-            right: 0;
-            top: 14.89%;
-            background-color: rgb(53, 53, 53);
-            overflow: hidden;   
-            height: 18.7%;
-            width: 9.7%;
-            transform: scale(0);
-            transition: .3s ease;
-            border: 2px solid white;
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-        .imge1:hover .ovrly {
-            transform: scale(1);
-        }
-        .text {
-            color: white;
-            font-size: 20px;
-            font-family: Calibri;
-            font-weight: bold;
-            position: absolute;
-            top: 35%;
-            left: 50%;
-            bottom: 50%;
-            transform: translate(-50%, 50%);
-            text-align: center;
-        }
-        .bck {
-            height: 350px;
-            width: 100%;
-            background-color: rgb(44, 44, 44);
-        }
-        .tengah {
-            width: 100%;
-            height: 700px;
-            background-color: rgba(53, 53, 53,0.5);  
-        }
-        .bulan {
-            padding: 70px 25px;
-            width: 96%;
-            background: none;
-            text-align: center;
-        }
-        .bulan ul {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style-type: none;
-        }
-        .bulan ul li {
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        .bulan .sebelum {
-            float: left;
-            padding-top: 10px;
-        }
-        .bulan .selanjutnya {
-            float: right;
-            padding-top: 10px;
-        }
-        .minggu {
-            margin: 0;
-            padding: 10px 0;
-            background-color: rgba(53, 53, 53, 0.5);
-        }
-        .minggu li {
-            display: inline-block;
-            width: 13.6%;
-            color: white;
-            text-align: center;
-        }
-        .hari {
-            padding: 10px 0;
-            background: none;
-            margin: 0;
-        }
-        .hari li {
-            list-style-type: none;
-            display: inline-block;
-            width: 13.6%;
-            margin-top: 3%;
-            text-align: center;
-            margin-bottom: 5px;
-            font-size: 20px;
-            color: white;
-        }
-        .hari li .hover {
-            background: rgba(53, 53, 53, 0.8);
-        }
-        .hari li .active {
-            padding: 5px;
-            width: 10px;
-            background: rgba(53, 53, 53, 0.8);
-            color: white;
-        }
-        body {
-            background: url("background.jpg");
-            margin: 0;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-    </style>
-    <body>  
-        <div class="header">
-            <a>My Personal Information</a>
-        </div>
-        <div class="body">
-            <div class="imge1">
-            <img class="myimg" src="33980.jpg" alt="MyFoto">
-            <div class="ovrly">
-                <div class="text">Nuryadi</div>
-            </div>
-            </div>
-            <h4>Nuryadi</h4>
-            <p>Junior Web Developer</p>
-        </div>
-        <div class="garis"></div>
-        <div class="garis1"></div>
-        <div class="garis2"></div>
-        <div class="garis3"></div>
-        <a href=""></a>
-        <div class="bottom">
-        <div class="bck">
-        <div class="isi">
-            <h3><i class="fa fa-user-o" aria-hidden="true"></i> My Story</h3>
-            <a>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Exercitationem, alias? Ipsa<br> eveniet harum sunt natus ab. Adipisci<br> necessitatibus earum numquam. Harum<br> blanditiis alias debitis amet rerum<br> delectus provident. Earum, harum?</a>
-        </div>
-        <div class="samping">
-            <h3><i class="fa fa-info-circle" aria-hidden="true"></i> Personal Information</h3>
-            <a>Age: 16 Years old</a>
-            <hr>
-            <a>Phone: 081254237872</a>
-            <hr>
-            <a>Email: adinury84@gmail.com</a>
-            <hr>
-        </div>
-        </div>
-        </div>
-        <div class="tengah">
-            <div class="bulan">
-                <ul>
-                    <li class="sebelum">&#10094;</li>
-                    <li class="selanjutnya">&#10095;</li>
-                    <li class="bln">October<br><span style="font-size: 18px;">2019</span></li>
-                </ul>
-            </div>
-            <ul class="minggu">
-                <li>Senin</li>
-                <li>Selasa</li>
-                <li>Rabu</li>
-                <li>Kamis</li>
-                <li>Jum'at</li>
-                <li>Sabtu</li>
-                <li>Minggu</li>
-            </ul>
+            const uw = document.querySelector('#uw');
+            uw.addEventListener('click',function(){
+                Swal.fire({
+                    title: 'Bby Sayang Ngga Sama Mas??',
+                    showDenyButton: true,
+                    confirmButtonText: `Sayang Banget`,
+                    denyButtonText: `Enggak`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Aaaaaa Mas Jga Sayang Banget Ma Bby').then((result) => {
+                            if (result.isConfirmed) {
+                                (async () => {
 
-            <ul class="hari"> 
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li><span class="active">4</span></li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
-        </div>
-        <div class="palingbwh">
-            <p>Find Me In!</p>
-            <img class="x1" src="github.png" target="_blank" onclick="window.location = 'https://github.com/Pentagram-dark/Penta'">
-            <img class="x2" src="in.png" target="_blank" onclick="window.location = 'https://linkedin.com'">
-            <img class="x3" src="twitter.png" target="_blank" onclick="window.location = 'https://twitter.com'">
-            <div class="backbwh"></div>
-        </div>
-        <div></div>
+                                const {value: au} = await swal.fire({
+                                    title: 'Seberapa Sayang Cbak Bby Sma Mas?',
+                                    input: 'range',
+                                    inputAttributes: {
+                                        min: 0,
+                                        max: 100,
+                                    },
+                                    inputValue: 0,
+                                    inputValidator: (value) => {
+                                        return new Promise((resolve) => {
+                                            if (value === '100') {
+                                                resolve()
+                                            } else {
+                                                resolve('Ishh Munyakk.. Gabole Kurang Dari 100 Sayang.. Pkonya Bby Harus 100% Sayang Sma Mas')
+                                            }
+                                        })
+                                    }
+                                })
+                                if (au) {
+                                    swal.fire('Aaaa Makasiii Udah ' + au + '% Sayang Ma Mas Huhu.. Terhura Deh Mas Juga Sayang Banget Sma Bby.. Gamau Bby Sampek Brubah Pokok Nya Jangan Sampek')
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            Swal.fire({
+                                            title: 'Eumm Mas Mo Nanyak Satuk Lagi Nik.. Bole Nggak',
+                                            showDenyButton: true,
+                                            confirmButtonText: `Bole`,
+                                            denyButtonText: 'Nggak Bole',
+                                            })
+                                            .then((result) => {
+                                                if (result.isConfirmed) {
+                                                    Swal.fire({
+                                                        title: 'Bby Pernah Bosan Ngk Sama Mas?',
+                                                        showDenyButton: true,
+                                                        confirmButtonText: `Enggak Dong`,
+                                                        denyButtonText: 'Pernah',
+                                                        }).then((result) => {
+                                                        if (result.isConfirmed) {
+                                                            Swal.fire('Huaaaa Makaci Bbyh Jangan Pernah Bosan Sma Mas Yaa.. Makaci Dah Mau Nemenin Mas Dri Dlu Sampek Sekarang.. Makaci Dah Slalu Sabar Sma Mas Slalu Warnai Hari" Mas.. Maaf Yaa Klo Kadang Mas Bikin Masalah.. Bikin Bby Nangiss.. Maaf Banget Cayank Ehe.. Ttp Kayak Gini Yaa.. Jangan Pernah Berubahh.. I Love You So Much Bby.. Umwahh') 
+                                                                .then((result) => {
+                                                                    if (result.isConfirmed) {
+                                                                        Swal.fire('Happy 1 Year 1 Month Ya Sayang Umwahh Ingatt Yaa.. Jangan Brubahh Ehe ❤️') 
+                                                                    }
+                                                                })
+                                                        }
+                                                        else if (result.isDenied) {
+                                                            Swal.fire('Yahh Jangan Bosan" Dong Sama Mass.. Ntr Mas Nangis Nihh')
+                                                        }
+                                                    }) 
+                                                }
+                                                else if (result.isDenied) {
+                                                    Swal.fire('Dahla Males.. Gamau Sayang Lagik')
+                                                }
+                                            })
+                                        }
+                                    })
+                                }
+                                })()
+                            }
+                        })
+                    }
+                    else if (result.isDenied) {
+                        Swal.fire('Tuh Kann.. Main Main Jawab Nyaa')
+                    }
+                })
+            });
+        })()
+        </script>
     </body>
 </html>
